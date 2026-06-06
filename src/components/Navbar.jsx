@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiSearch, FiHeart, FiShoppingCart, FiUser, FiX } from 'react-icons/fi';
+import { FiSearch, FiHeart, FiShoppingCart, FiUser, FiX, FiBell } from 'react-icons/fi';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Navbar = () => {
@@ -14,10 +14,10 @@ const Navbar = () => {
       {/* 1. Logo */}
       <Link to="/" className="text-xl font-black text-black tracking-[0.3em]">LUXEMART</Link>
 
-      {/* 2. Search Container (Guideline 8: Hidden until icon clicked) */}
+      {/* 2. Search Container */}
       <div className="flex-1 flex justify-center px-10">
         {isSearchOpen ? (
-          <div className="flex items-center bg-gray-50 border border-black px-4 py-2 w-full max-w-md animate-in fade-in duration-300">
+          <div className="flex items-center bg-gray-50 border border-black px-4 py-2 w-full max-w-md">
             <input 
               autoFocus
               type="text" 
@@ -39,11 +39,19 @@ const Navbar = () => {
 
       {/* 3. Right Icons */}
       <div className="flex items-center space-x-8">
+        {/* Notification Icon (Guideline Requirement) */}
+        <button className="text-black hover:opacity-50 transition relative">
+          <FiBell size={20} />
+          <span className="absolute top-0 right-0 h-2 w-2 bg-black rounded-full border border-white"></span>
+        </button>
+
         <Link to="/login" className="text-black hover:opacity-50 transition"><FiUser size={20} /></Link>
+        
         <Link to="/wishlist" className="text-black hover:opacity-50 transition relative">
           <FiHeart size={20} />
           {wishlist.length > 0 && <span className="absolute -top-2 -right-2 bg-black text-white text-[7px] rounded-full h-3.5 w-3.5 flex items-center justify-center font-bold">{wishlist.length}</span>}
         </Link>
+        
         <Link to="/cart" className="text-black hover:opacity-50 transition relative">
           <FiShoppingCart size={20} />
           {cart.length > 0 && <span className="absolute -top-2 -right-2 bg-black text-white text-[7px] rounded-full h-3.5 w-3.5 flex items-center justify-center font-bold">{cart.length}</span>}

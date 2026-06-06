@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { FiTruck, FiRotateCcw, FiShield, FiHeart } from 'react-icons/fi';
+import { FiTruck, FiRotateCcw, FiShield, FiHeart, FiStar, FiCreditCard, FiTag } from 'react-icons/fi';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -10,7 +10,6 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Get cart and wishlist from Redux
   const { cart, wishlist } = useSelector(state => state);
 
   useEffect(() => {
@@ -46,11 +45,27 @@ const ProductDetails = () => {
         {/* Right Side: Details */}
         <div className="md:w-1/2">
           <p className="text-gray-400 uppercase tracking-[0.3em] text-[10px] mb-4">{product.category}</p>
-          <h1 className="text-3xl font-bold text-black mb-6 uppercase tracking-tight">{product.title}</h1>
-          <p className="text-4xl font-light text-black mb-10">${product.price.toFixed(2)}</p>
+          <h1 className="text-3xl font-bold text-black mb-4 uppercase tracking-tight">{product.title}</h1>
+          
+          {/* Reviews (Requirement) */}
+          <div className="flex items-center gap-2 mb-6 text-black">
+             <div className="flex gap-0.5"><FiStar size={12} fill="black"/><FiStar size={12} fill="black"/><FiStar size={12} fill="black"/><FiStar size={12} fill="black"/><FiStar size={12}/></div>
+             <span className="text-[10px] text-gray-400 uppercase tracking-widest">(24 Reviews)</span>
+          </div>
+
+          <p className="text-4xl font-light text-black mb-2">${product.price.toFixed(2)}</p>
+          <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-10 font-bold">Units Available: 12</p>
           
           <div className="border-t border-b border-gray-100 py-10 mb-10">
+            <h4 className="text-[10px] font-bold uppercase tracking-widest mb-4">Description</h4>
             <p className="text-gray-600 leading-relaxed text-sm font-light">{product.description}</p>
+          </div>
+
+          {/* Exclusive Offers (Requirement) */}
+          <div className="mb-10 p-6 bg-gray-50 space-y-3">
+             <h4 className="text-[10px] font-bold uppercase tracking-widest flex items-center gap-2"><FiTag /> Exclusive Offers</h4>
+             <p className="text-[9px] text-gray-500 uppercase tracking-[0.2em]">• Use code LUXE20 for 20% off jewelry</p>
+             <p className="text-[9px] text-gray-500 uppercase tracking-[0.2em]">• Complimentary gift wrapping on all orders</p>
           </div>
 
           {/* Single Functional Button Section */}
@@ -69,6 +84,12 @@ const ProductDetails = () => {
               <FiHeart fill={isFavorite ? "white" : "none"} />
               {isFavorite ? "In Wishlist" : "Add to Wishlist"}
             </button>
+          </div>
+
+          {/* Payment Options (Requirement) */}
+          <div className="mb-10">
+             <h4 className="text-[10px] font-bold uppercase tracking-widest mb-4 flex items-center gap-2"><FiCreditCard /> Payment Methods</h4>
+             <p className="text-[9px] text-gray-400 uppercase tracking-[0.2em]">Visa, Mastercard, AMEX, PayPal, Apple Pay</p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 border-t border-gray-100 pt-10">
