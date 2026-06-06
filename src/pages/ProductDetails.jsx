@@ -47,7 +47,7 @@ const ProductDetails = () => {
           <p className="text-gray-400 uppercase tracking-[0.3em] text-[10px] mb-4">{product.category}</p>
           <h1 className="text-3xl font-bold text-black mb-4 uppercase tracking-tight">{product.title}</h1>
           
-          {/* Reviews (Requirement) */}
+          {/* Reviews */}
           <div className="flex items-center gap-2 mb-6 text-black">
              <div className="flex gap-0.5"><FiStar size={12} fill="black"/><FiStar size={12} fill="black"/><FiStar size={12} fill="black"/><FiStar size={12} fill="black"/><FiStar size={12}/></div>
              <span className="text-[10px] text-gray-400 uppercase tracking-widest">(24 Reviews)</span>
@@ -61,7 +61,7 @@ const ProductDetails = () => {
             <p className="text-gray-600 leading-relaxed text-sm font-light">{product.description}</p>
           </div>
 
-          {/* Exclusive Offers (Requirement) */}
+          {/* Exclusive Offers */}
           <div className="mb-10 p-6 bg-gray-50 space-y-3">
              <h4 className="text-[10px] font-bold uppercase tracking-widest flex items-center gap-2"><FiTag /> Exclusive Offers</h4>
              <p className="text-[9px] text-gray-500 uppercase tracking-[0.2em]">• Use code LUXE20 for 20% off jewelry</p>
@@ -86,7 +86,7 @@ const ProductDetails = () => {
             </button>
           </div>
 
-          {/* Payment Options (Requirement) */}
+          {/* Payment Options */}
           <div className="mb-10">
              <h4 className="text-[10px] font-bold uppercase tracking-widest mb-4 flex items-center gap-2"><FiCreditCard /> Payment Methods</h4>
              <p className="text-[9px] text-gray-400 uppercase tracking-[0.2em]">Visa, Mastercard, AMEX, PayPal, Apple Pay</p>

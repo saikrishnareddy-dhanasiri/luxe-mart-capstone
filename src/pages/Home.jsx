@@ -61,12 +61,12 @@ const Home = () => {
                   <p className="text-gray-400 text-[9px] uppercase tracking-widest mb-2 font-medium">{product.category}</p>
                   <h3 className="text-xs font-bold text-black uppercase truncate mb-2 px-2">{product.title}</h3>
                   
-                  {/* Review Stars (Requirement) */}
+                  {/* Review Stars */}
                   <div className="flex justify-center text-black mb-2 gap-0.5">
                     {[...Array(5)].map((_, i) => <span key={i} className="text-[10px]">★</span>)}
                   </div>
 
-                  {/* Discounted vs Original Price (Requirement) */}
+                  {/* Discounted vs Original Price */}
                   <div className="flex justify-center items-center gap-3">
                     <p className="text-black font-bold text-sm">${product.price.toFixed(2)}</p>
                     <p className="text-gray-300 line-through text-[10px] font-light">${(product.price * 1.4).toFixed(2)}</p>
@@ -78,7 +78,7 @@ const Home = () => {
         )}
       </div>
 
-      {/* Add What We Sell Section (Guideline Requirement) */}
+      {/* Added What We Sell Section */}
       <div className="mt-32 py-24 border-t border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-16 text-center px-10 max-w-7xl mx-auto">
         <div>
           <h4 className="text-[11px] font-bold uppercase tracking-[0.4em] mb-4 text-black">Complimentary Shipping</h4>

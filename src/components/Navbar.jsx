@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* 3. Right Icons */}
       <div className="flex items-center space-x-8">
-        {/* Notification Icon (Guideline Requirement) */}
+        {/* Notification Icon */}
         <button className="text-black hover:opacity-50 transition relative">
           <FiBell size={20} />
           <span className="absolute top-0 right-0 h-2 w-2 bg-black rounded-full border border-white"></span>

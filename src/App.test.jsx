@@ -15,7 +15,6 @@ describe('LuxeMart Branding Test', () => {
       </Provider>
     );
     
-    // Check if the logo text exists
     const logoElement = screen.getByText(/LUXEMART/i);
     expect(logoElement).toBeInTheDocument();
   });

@@ -24,7 +24,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Support Section - FAQ LINK ADDED HERE */}
+        {/* Support Section */}
         <div>
           <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] mb-8 text-black">Client Service</h4>
           <ul className="text-gray-500 text-[9px] uppercase tracking-[0.2em] space-y-4 font-medium">

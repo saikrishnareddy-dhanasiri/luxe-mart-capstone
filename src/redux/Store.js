@@ -6,8 +6,8 @@ const initialState = {
     wishlist: JSON.parse(localStorage.getItem('wishlist')) || [],
     products: [],
     loading: true,
-    searchQuery: '',      // New
-    activeCategory: 'all' // New
+    searchQuery: '',      
+    activeCategory: 'all' 
 };
 
 const shopReducer = (state = initialState, action) => {

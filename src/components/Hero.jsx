@@ -35,7 +35,7 @@ const Hero = () => {
           {/* Image */}
           <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
           
-          {/* Dark Overlay for Legibility */}
+          {/* Legibility check */}
           <div className="absolute inset-0 bg-black/40"></div>
 
           {/* Content */}

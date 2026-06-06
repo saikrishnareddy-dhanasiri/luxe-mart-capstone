@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux' 
 import store from './redux/Store'     
 import Navbar from './components/Navbar'
-import Footer from './components/Footer' // <--- This will now work
+import Footer from './components/Footer' 
 import Home from './pages/Home'
 import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
